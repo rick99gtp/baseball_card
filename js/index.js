@@ -27,12 +27,12 @@ track.style.strokeDashoffset =  circumference;
 
 function setProgress(percent) {
     circle_vsl.style.transition = 'stroke-dashoffset .5s ease-out';
-    circle_vsl.setAttribute('stroke',"#0FA4F8"); //#0FA4F8");
+    circle_vsl.setAttribute('stroke',"lime"); //#0FA4F8");
     let offset = circumference - (rating_CON_VSL * 8) / 1000 * circumference;
     circle_vsl.style.strokeDashoffset = offset;
 
     circle_vsr.style.transition = 'stroke-dashoffset .5s .2s ease-out';
-    circle_vsr.setAttribute('stroke',"#0FA4F8"); //url(#linear)
+    circle_vsr.setAttribute('stroke',"orangered"); //url(#linear)
     offset = circumference - (rating_CON_VSR * 8) / 1000 * circumference;
     circle_vsr.style.strokeDashoffset = offset;
 }
