@@ -67,6 +67,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px 0;
 }
 
 .card .contact .vs-left, .card .contact .vs-right {
@@ -106,7 +107,6 @@
   z-index: 99;
   color: white;
   font-size: 1.25em;
-  font-family: Sans-serif;
 }
 
 .card .contact .vs-left-name, .card .contact .vs-right-name {
@@ -114,7 +114,6 @@
   color: white;
   font-weight: bold;
   font-size: 1em;
-  font-family: sans-serif;
   bottom: 1px;
 }
 /*# sourceMappingURL=styles.css.map */

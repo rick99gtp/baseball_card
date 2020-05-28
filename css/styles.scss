@@ -55,6 +55,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        padding: 10px 0;
 
         .vs-left, .vs-right {
             position: relative;
@@ -81,7 +82,6 @@
                 z-index: 99;
                 color: white;
                 font-size: 1.25em;
-                font-family: Sans-serif;
             }
         }
         .vs-left-name, .vs-right-name {
@@ -89,7 +89,6 @@
             color: white;
             font-weight: bold;
             font-size: 1em;
-            font-family: sans-serif;
             bottom: 1px;
         }
     }

@@ -1,5 +1,5 @@
-let rating_CON_VSL = 40;
-let rating_CON_VSR = 37;
+let rating_CON_VSL = 37;
+let rating_CON_VSR = 40;
 let rating_POW_VSL = 97;
 let rating_POW_VSR = 99;
 
@@ -50,19 +50,19 @@ pow_vsr.style.strokeDasharray = `${circumference} ${circumference}`
 pow_vsr.style.strokeDashoffset = circumference;
 
 function setProgress(percent) {
-    con_vsl.style.transition = 'stroke-dashoffset .5s ease-out';
+    con_vsl.style.transition = 'stroke-dashoffset .25s ease-out';
     let offset = circumference - (rating_CON_VSL * 4) / 1000 * circumference;
     con_vsl.style.strokeDashoffset = offset;
 
-    pow_vsl.style.transition = 'stroke-dashoffset .5s .25s ease-out';
+    pow_vsl.style.transition = 'stroke-dashoffset .25s ease-out';
     offset = circumference - (rating_POW_VSL * 4) / 1000 * circumference;
     pow_vsl.style.strokeDashoffset = offset;
 
-    con_vsr.style.transition = 'stroke-dashoffset .5s .2s ease-out';
+    con_vsr.style.transition = 'stroke-dashoffset .25s .25s ease-out';
     offset = circumference - (rating_CON_VSR * 4) / 1000 * circumference;
     con_vsr.style.strokeDashoffset = offset;
 
-    pow_vsr.style.transition = 'stroke-dashoffset .5s .25s ease-out';
+    pow_vsr.style.transition = 'stroke-dashoffset .25s .25s ease-out';
     offset = circumference - (rating_POW_VSR * 4) / 1000 * circumference;
     pow_vsr.style.strokeDashoffset = offset;
 }
