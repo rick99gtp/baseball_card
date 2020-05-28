@@ -116,4 +116,40 @@
   font-size: 1em;
   bottom: 1px;
 }
+
+.card .other-ratings {
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.card .other-ratings .speed-rating {
+  text-align: center;
+}
+
+.card .other-ratings .speed-rating .rating-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 5px;
+}
+
+.card .other-ratings .speed-rating .rating-numbers ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.card .other-ratings .speed-rating .rating-numbers ul li {
+  padding: .5em 1em 0 1em;
+  font-size: .75em;
+}
 /*# sourceMappingURL=styles.css.map */

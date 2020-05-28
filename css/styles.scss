@@ -92,13 +92,31 @@
             bottom: 1px;
         }
     }
+    .other-ratings {
+        color: white;
+        width: 60%;
+        margin: 0 auto;
 
-    // .text-below-ratings {
-    //     display: flex;
-    //     justify-content: space-around;
-    //     align-items: center;
-    //     color: white;
-    //     font-size: 1.25em;
-    //     padding: 0px 20px 10px 20px;
-    // }
+        .speed-rating {
+            text-align: center;
+
+            .rating-numbers {
+                display: flex;
+                flex-direction: column; // used to correct the behavior of svg elements where it adds spaces between elements
+                padding-bottom: 5px;
+
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    list-style: none;
+
+                    li {
+                        padding: .5em 1em 0 1em;
+                        font-size: .75em;
+                    }
+                }
+
+            }
+        }
+    }
 }

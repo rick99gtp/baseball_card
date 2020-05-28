@@ -2,6 +2,7 @@ let rating_CON_VSL = 37;
 let rating_CON_VSR = 40;
 let rating_POW_VSL = 97;
 let rating_POW_VSR = 99;
+let rating_SPEED = 28;
 
 let PI = 3.14159265359;
 
@@ -14,8 +15,15 @@ const pow_vsl = document.querySelector('.rating-pow-vsl');
 const track_pow_vsr = document.querySelector('.rating-track-pow-vsr');
 const pow_vsr = document.querySelector('.rating-pow-vsr');
 
+const speed_rating = document.querySelector('.speed-rating-rect');
+const speed_knob = document.querySelector('.speed-knob');
+
 const radius = con_vsl.r.baseVal.value;
 const circumference = radius * 2 * PI;
+
+let speed_track_length = speed_rating.getAttribute('width');
+speed_rating.setAttribute('width', 3 + (((rating_SPEED / 10) - 1) * 10.333) + '%');
+console.log(speed_rating.getAttribute('width'));
 
 console.log(circumference);
 
@@ -50,21 +58,25 @@ pow_vsr.style.strokeDasharray = `${circumference} ${circumference}`
 pow_vsr.style.strokeDashoffset = circumference;
 
 function setProgress(percent) {
-    con_vsl.style.transition = 'stroke-dashoffset .25s ease-out';
+    con_vsl.style.transition = 'stroke-dashoffset .5s ease-out';
     let offset = circumference - (rating_CON_VSL * 4) / 1000 * circumference;
     con_vsl.style.strokeDashoffset = offset;
 
-    pow_vsl.style.transition = 'stroke-dashoffset .25s ease-out';
+    pow_vsl.style.transition = 'stroke-dashoffset .5s ease-out';
     offset = circumference - (rating_POW_VSL * 4) / 1000 * circumference;
     pow_vsl.style.strokeDashoffset = offset;
 
-    con_vsr.style.transition = 'stroke-dashoffset .25s .25s ease-out';
+    con_vsr.style.transition = 'stroke-dashoffset .5s .25s ease-out';
     offset = circumference - (rating_CON_VSR * 4) / 1000 * circumference;
     con_vsr.style.strokeDashoffset = offset;
 
-    pow_vsr.style.transition = 'stroke-dashoffset .25s .25s ease-out';
+    pow_vsr.style.transition = 'stroke-dashoffset .5s .25s ease-out';
     offset = circumference - (rating_POW_VSR * 4) / 1000 * circumference;
     pow_vsr.style.strokeDashoffset = offset;
+
+    // speed rating
+    speed_rating.style.transition = 'stroke-dashoffset .5s .25s ease-out';
+    
 }
 
 setTimeout(setProgress);
