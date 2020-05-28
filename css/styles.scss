@@ -38,8 +38,16 @@
             padding: 10px;
             font-weight: bold;
             text-align: center;
-            box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, .25);
+            box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, .2);
         }
+    }
+
+    .bio-separator {
+        width: 20%;
+        margin: 0 auto;
+        height: 5px;
+        background-color: #212429;
+        border-radius: 10px;
     }
 
     .contact {
@@ -47,16 +55,21 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 20px;
 
         .vs-left, .vs-right {
             position: relative;
-            width: 150px;
+            width: 180px;
             display: flex;
             align-items: center;
+            justify-content: space-evenly;
 
-            .blue-rating, .blue-rating-vsr, .rating-track {
-                transform: rotate(125deg);
+            .rating-con-vsl, .rating-con-vsr, .rating-track-vsl, .rating-track-vsr {
+                transform: rotate(110deg);
+                transform-origin: 50% 50%;
+            }
+
+            .rating-track-pow-vsl, .rating-pow-vsl, .rating-track-pow-vsr, .rating-pow-vsr {
+                transform: rotate(250deg) scale(-1,1);
                 transform-origin: 50% 50%;
             }
 
@@ -67,7 +80,7 @@
                 transform: translate(-50%, -50%);
                 z-index: 99;
                 color: white;
-                font-size: 4em;
+                font-size: 1.25em;
                 font-family: Sans-serif;
             }
         }
@@ -80,4 +93,13 @@
             bottom: 1px;
         }
     }
+
+    // .text-below-ratings {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     align-items: center;
+    //     color: white;
+    //     font-size: 1.25em;
+    //     padding: 0px 20px 10px 20px;
+    // }
 }

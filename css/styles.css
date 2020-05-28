@@ -45,8 +45,16 @@
   padding: 10px;
   font-weight: bold;
   text-align: center;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.25);
-          box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.2);
+          box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.2);
+}
+
+.card .bio-separator {
+  width: 20%;
+  margin: 0 auto;
+  height: 5px;
+  background-color: #212429;
+  border-radius: 10px;
 }
 
 .card .contact {
@@ -59,23 +67,32 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
 }
 
 .card .contact .vs-left, .card .contact .vs-right {
   position: relative;
-  width: 150px;
+  width: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.card .contact .vs-left .blue-rating, .card .contact .vs-left .blue-rating-vsr, .card .contact .vs-left .rating-track, .card .contact .vs-right .blue-rating, .card .contact .vs-right .blue-rating-vsr, .card .contact .vs-right .rating-track {
-  -webkit-transform: rotate(125deg);
-          transform: rotate(125deg);
+.card .contact .vs-left .rating-con-vsl, .card .contact .vs-left .rating-con-vsr, .card .contact .vs-left .rating-track-vsl, .card .contact .vs-left .rating-track-vsr, .card .contact .vs-right .rating-con-vsl, .card .contact .vs-right .rating-con-vsr, .card .contact .vs-right .rating-track-vsl, .card .contact .vs-right .rating-track-vsr {
+  -webkit-transform: rotate(110deg);
+          transform: rotate(110deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.card .contact .vs-left .rating-track-pow-vsl, .card .contact .vs-left .rating-pow-vsl, .card .contact .vs-left .rating-track-pow-vsr, .card .contact .vs-left .rating-pow-vsr, .card .contact .vs-right .rating-track-pow-vsl, .card .contact .vs-right .rating-pow-vsl, .card .contact .vs-right .rating-track-pow-vsr, .card .contact .vs-right .rating-pow-vsr {
+  -webkit-transform: rotate(250deg) scale(-1, 1);
+          transform: rotate(250deg) scale(-1, 1);
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
 }
@@ -88,7 +105,7 @@
           transform: translate(-50%, -50%);
   z-index: 99;
   color: white;
-  font-size: 4em;
+  font-size: 1.25em;
   font-family: Sans-serif;
 }
 
