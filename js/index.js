@@ -2,7 +2,8 @@ let rating_CON_VSL = 37;
 let rating_CON_VSR = 40;
 let rating_POW_VSL = 97;
 let rating_POW_VSR = 99;
-let rating_SPEED = 28;
+let rating_SPEED = 50;
+let rating_FIELDING = 87;
 
 let PI = 3.14159265359;
 
@@ -14,6 +15,8 @@ const track_pow_vsl = document.querySelector('.rating-track-pow-vsl');
 const pow_vsl = document.querySelector('.rating-pow-vsl');
 const track_pow_vsr = document.querySelector('.rating-track-pow-vsr');
 const pow_vsr = document.querySelector('.rating-pow-vsr');
+const fielding_rating = document.querySelector('.fielding-rating-rect');
+const fielding_knob = document.querySelector('.fielding-knob');
 
 const speed_rating = document.querySelector('.speed-rating-rect');
 const speed_knob = document.querySelector('.speed-knob');
@@ -21,11 +24,10 @@ const speed_knob = document.querySelector('.speed-knob');
 const radius = con_vsl.r.baseVal.value;
 const circumference = radius * 2 * PI;
 
-let speed_track_length = speed_rating.getAttribute('width');
-speed_rating.setAttribute('width', 3 + (((rating_SPEED / 10) - 1) * 10.333) + '%');
-console.log(speed_rating.getAttribute('width'));
-
-console.log(circumference);
+speed_rating.setAttribute('width', '0%');
+speed_knob.setAttribute('cx', 8);
+fielding_rating.setAttribute('width', '0%');
+fielding_knob.setAttribute('cx', 8);
 
 // set vs-left-contact text
 let vslContactText = document.querySelector('.vs-left-contact');
@@ -75,7 +77,16 @@ function setProgress(percent) {
     pow_vsr.style.strokeDashoffset = offset;
 
     // speed rating
-    speed_rating.style.transition = 'stroke-dashoffset .5s .25s ease-out';
+    speed_rating.style.transition = 'width .25s .25s ease-out';
+    speed_knob.style.transition = 'cx .25s .25s ease-out';
+    speed_rating.setAttribute('width', 3 + (((rating_SPEED / 10) - 1) * 10.333) + '%');
+    speed_knob.setAttribute('cx', 8 + (((rating_SPEED / 10) - 1) * 31));
+
+    // fielding rating
+    fielding_rating.style.transition = 'width .25s .35s ease-out';
+    fielding_knob.style.transition = 'cx .25s .35s ease-out';
+    fielding_rating.setAttribute('width', 3 + (((rating_FIELDING / 10) - 1) * 10.333) + '%');
+    fielding_knob.setAttribute('cx', 8 + (((rating_FIELDING / 10) - 1) * 31));
     
 }
 
